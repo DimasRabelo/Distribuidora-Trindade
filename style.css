@@ -166,8 +166,8 @@ nav ul li a:hover {
 
 .circulo {
     position: absolute;
-    top: 50%; /* Centraliza verticalmente */
-    right: 235px; /* Encosta no lado direito */
+    top: 49%; /* Centraliza verticalmente */
+    right: 227px; /* Encosta no lado direito */
     width: 400px; /* Tamanho do círculo */
     height: 400px; /* Tamanho do círculo */
     background-color: rgba(35, 9, 9, 0.1); /* Cor do círculo, ajuste conforme necessário */
