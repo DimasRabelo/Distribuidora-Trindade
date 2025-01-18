@@ -37,7 +37,7 @@ body {
 }
 
 h2 {
-    color: #282727;
+    color: #030303;
     /* Cor do texto */
     font-size: 60px;
     /* Tamanho do texto */
@@ -141,8 +141,10 @@ nav ul li a {
 
 .imagem-ovo {
     width: 43%;
+    position: relative; /* Garante que o top funcione */
     top: -8px;
-
+    left: 17%; /* Move a imagem para o centro do contêiner */
+    transform: translateX(-50%); /* Ajusta para centralizar perfeitamente */
 }
 
 nav ul {
@@ -165,7 +167,7 @@ nav ul li a:hover {
 .circulo {
     position: absolute;
     top: 50%; /* Centraliza verticalmente */
-    right: 200px; /* Encosta no lado direito */
+    right: 235px; /* Encosta no lado direito */
     width: 400px; /* Tamanho do círculo */
     height: 400px; /* Tamanho do círculo */
     background-color: rgba(35, 9, 9, 0.1); /* Cor do círculo, ajuste conforme necessário */
