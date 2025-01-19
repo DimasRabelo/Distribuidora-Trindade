@@ -88,6 +88,7 @@ nav {
     left: 0; /* Alinha o menu à esquerda */
     width: 100%; /* Faz o menu ocupar toda a largura da página */
     z-index: 10; /* Garante que o menu fique acima de outros elementos */
+    top: 15px;
    
 }
 
@@ -113,7 +114,7 @@ nav ul li a {
 .menu {
     display: flex;
     justify-content: flex-start;
-    margin-top: 70px;
+    margin-top: 25px;
     align-items: center;
     
 }
@@ -140,10 +141,10 @@ nav ul li a {
 }
 
 .imagem-ovo {
-    width: 43%;
+    width: 50%;
     position: relative; /* Garante que o top funcione */
-    top: -8px;
-    left: 17%; /* Move a imagem para o centro do contêiner */
+    top: 30px;
+    left: 10%; /* Move a imagem para o centro do contêiner */
     transform: translateX(-50%); /* Ajusta para centralizar perfeitamente */
 }
 
@@ -164,17 +165,9 @@ nav ul li a:hover {
     
 }
 
-.circulo {
-    position: absolute;
-    top: 49%; /* Centraliza verticalmente */
-    right: 227px; /* Encosta no lado direito */
-    width: 400px; /* Tamanho do círculo */
-    height: 400px; /* Tamanho do círculo */
-    background-color: rgba(35, 9, 9, 0.1); /* Cor do círculo, ajuste conforme necessário */
-    border-radius: 50%; /* Faz o círculo */
-    transform: translate(50%, -50%); /* Ajusta o posicionamento no lado direito */
-    z-index: 1; /* Coloca o círculo abaixo da imagem */
-}
+
+
+
 
 .imagem-ovo {
     position: relative; /* A imagem ficará acima do círculo */
