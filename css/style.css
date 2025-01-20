@@ -323,7 +323,7 @@ h2 {
     margin-top: 20px;  /* Espaçamento superior */
     margin-bottom: 20px; /* Espaçamento inferior */
     color: #000000;  /* Cor do texto */
-    margin-bottom: 50px;
+  
 }
 
 form {
@@ -412,6 +412,9 @@ textarea {
    
     border-radius: 10px 10px;
    
+}
+.quemSomos img:hover{
+    transform: scale(1.1); /* Aumenta a imagem em 10% */   
 }
 
 .quemSomos p {
