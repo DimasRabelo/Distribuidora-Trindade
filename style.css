@@ -231,6 +231,13 @@ footer p {
     margin: 0 10px 0 0;
     font-size: 0.9rem;
 }
+.entrega-info {
+    text-align: right;  /* Alinha o texto à direita */
+    margin-right: 70px; /* Espaçamento da borda direita */
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #333; /* Cor do texto */
+}
 
    
 
