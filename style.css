@@ -274,3 +274,29 @@ footer p {
     transform: scale(1.1); /* Aumenta o botão levemente ao passar o mouse */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Intensifica a sombra ao passar o mouse */
 }
+
+/* Página Produtos */
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap; /* Quebra para a linha seguinte após 3 itens */
+    justify-content: center; /* Centraliza os itens */
+    gap: 20px; /* Espaçamento entre os itens */
+    max-width: 900px; /* Define uma largura máxima */
+    margin: 0 auto; /* Centraliza o conteúdo na página */
+  }
+  
+  .produto {
+    flex: 1 1 calc(33.33% - 20px); /* Garante 3 colunas */
+    box-sizing: border-box; /* Mantém o tamanho correto */
+    text-align: center; /* Centraliza texto e imagem */
+  }
+  
+  .produto img {
+    width: 100%; /* Ajusta a largura ao container */
+    max-width: 250px; /* Limita o tamanho máximo das imagens */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+    border-radius: 5px; /* Bordas arredondadas */
+  }
+  
+  
