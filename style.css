@@ -297,6 +297,11 @@ footer p {
     max-width: 250px; /* Limita o tamanho máximo das imagens */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
     border-radius: 5px; /* Bordas arredondadas */
+    transition: transform 0.3s ease-in-out; /* Transição suave de 0.3 segundos */
   }
   
+  /* Efeito ao passar o mouse */
+.produto img:hover {
+    transform: scale(1.2); /* Aumenta a imagem em 10% */
+  }
   
