@@ -137,6 +137,10 @@ nav ul li a {
     overflow: hidden;
     margin:12px 12px;
 }
+.logo:hover{ 
+        transform: scale(1.1); /* Aumenta a imagem em 10% */   
+    }
+    
 
 .logogeral {
     width: 100%;
