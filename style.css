@@ -312,3 +312,116 @@ footer p {
     transform: scale(1.2); /* Aumenta a imagem em 10% */
   }
   
+/* Formulário de Contato */
+
+h2 {
+    font-size: 24px;  /* Tamanho menor da fonte */
+    text-align: center;  /* Centralizar o texto */
+    font-weight: 600;  /* Ajustar o peso da fonte */
+    margin-top: 20px;  /* Espaçamento superior */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    color: #000000;  /* Cor do texto */
+    margin-bottom: 50px;
+}
+
+form {
+    margin-bottom: 50px; /* Adiciona espaço abaixo do formulário */
+}
+
+.map {
+    margin-top: 50px; /* Adiciona espaço acima do mapa */
+}
+
+
+form {
+    width: 80%; /* Definir a largura do formulário */
+    max-width: 600px; /* Limitar o máximo de largura */
+    margin: 0 auto; /* Centralizar o formulário horizontalmente */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Os campos vão ficar em coluna */
+    gap: 15px; /* Espaço entre os campos */
+}
+
+.form-field {
+    display: flex; /* Flexbox para alinhar o label e o input */
+    justify-content: flex-start; /* Garante que o conteúdo esteja à esquerda */
+    align-items: center; /* Alinha o label e o input verticalmente */
+    gap: 10px; /* Espaçamento entre o label e o input */
+}
+
+label {
+    width: 120px; /* Define uma largura fixa para os labels */
+    font-weight: bold; /* Deixa os labels em negrito */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%; /* Faz os inputs ocuparem toda a largura disponível */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical; /* Permite que o usuário redimensione a altura da área de texto */
+}
+
+/* Estiliza o botão para ocupar toda a largura */
+.form-field input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Adiciona efeito hover ao botão */
+.form-field input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.mensagem {
+    margin-top: 20px;  /* Adiciona espaçamento específico para o textarea */
+}
+
+/* Quem Somos */
+
+.quemSomos{
+    display: flex;
+    margin-bottom: 50px; 
+    margin-top: 50px;
+}
+
+.quemSomos img{
+   
+    border-radius: 10px 10px;
+   
+}
+
+.quemSomos p {
+    margin-top: 20px; /* Alternativamente, espaçamento acima do parágrafo */
+    font-size: 16px;
+    line-height: 2.5; /* Melhora a leitura do texto */
+}
+
+.quemSomos div  {
+    width: 100%;
+}
+
+.quemSomos div div {
+    width: 100%;
+}
