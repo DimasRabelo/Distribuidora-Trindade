@@ -43,6 +43,7 @@ h2 {
     /* Tamanho do texto */
     font-weight: bold;
     /* Grossura do texto*/
+    margin-top: -30px;
 }
 
 span {
@@ -134,6 +135,7 @@ nav ul li a {
     width: 170px;
     border-radius: 50%;
     overflow: hidden;
+    margin:12px 12px;
 }
 
 .logogeral {
