@@ -149,7 +149,7 @@ nav ul li a {
 .imagem-ovo {
     width: 50%;
     position: relative; /* Garante que o top funcione */
-    top: 30px;
+    top: -25px;
     left: 10%; /* Move a imagem para o centro do contêiner */
     transform: translateX(-50%); /* Ajusta para centralizar perfeitamente */
 }
