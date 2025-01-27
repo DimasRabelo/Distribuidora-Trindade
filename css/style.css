@@ -186,12 +186,24 @@ nav ul li a:hover {
 
 .site {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%; /* Garante que o conteúdo interno ocupe 100% */
     max-width: 1200px; /* Limita a largura máxima */
     margin: 0 auto; /
 }
+
+.secProd{
+    display: flex;
+}
+
+
+.videoProduto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 footer {
     display: flex;
     justify-content: space-between; /* Espaçamento entre as seções */
@@ -295,8 +307,7 @@ footer p {
 .produtos {
     display: flex;
     flex-wrap: wrap; /* Quebra para a linha seguinte após 3 itens */
-    justify-content: center; /* Centraliza os itens */
-    gap: 20px; /* Espaçamento entre os itens */
+    gap: 30px; /* Espaçamento entre os itens */
     max-width: 900px; /* Define uma largura máxima */
     margin: 0 auto; /* Centraliza o conteúdo na página */
   }
