@@ -183,6 +183,17 @@ nav ul li a:hover {
     z-index: 2; /* Garante que a imagem fique acima do círculo */
 }
 
+
+.banner {
+    width: 100%; /* 100% da largura da tela */
+    
+}
+
+.banner img {
+    width: 100%;
+   
+}  
+
 /* Página Produtos */
 
 .site {
