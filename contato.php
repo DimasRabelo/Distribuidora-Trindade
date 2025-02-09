@@ -21,27 +21,14 @@
 
 <body>
 
-    <div class="menu-inicio">
+    <?php require_once('conteudo/topoMenu.php'); ?>
 
 
-
-        <div class="logogeral"> <img src="img/logo-trindade.jpg" class="logo"> </div>
-
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="quemSomos.html">Quem Somos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-
-    </div>
 
     <h2>Perguntas ou Dúvidas? Entre em contato conosco!</h2>
-   
+
     <div class="site">
-        
+
 
         <form action="#" method="POST">
             <div class="form-group">

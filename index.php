@@ -20,29 +20,12 @@
 </head>
 
 <body>
-    
-
-
-    <div class="menu-inicio">
 
 
 
-        <div class="logogeral"> <img src="img/logo-trindade.jpg" class="logo"> </div>
+<?php require_once('conteudo/topoMenu.php'); ?>
 
-      
-      
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="quemSomos.html">Quem Somos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
 
-    </div>
-
-   
 
 
 
@@ -64,14 +47,15 @@
     </div>
 
     <div class="menu">
+
         <img src="img/ovo-menu1.png" class="botao-menu"
-            onclick="trocarImagem('img/ovos-branco.png'); trocarCor('#ff8c00');">
+            onclick="trocarImagem('img/ovo-branco.png'); trocarCor('#ff8c00');">
         <p>Ovos Brancos</p>
-    
+
         <img src="img/ovo-menu2.png" class="botao-menu"
             onclick="trocarImagem('img/ovo-vermelho.png'); trocarCor('#8b5742');">
         <p>Ovos Vermelhos</p>
-    
+
         <img src="img/ovo-menu3.png" class="botao-menu"
             onclick="trocarImagem('img/ovo-codorna.png'); trocarCor('#ada86d');">
         <p>Ovos de Codorna</p>
@@ -79,7 +63,7 @@
 
 
 
-    
+
 
 
     <a href="https://wa.me/5511913603956" target="_blank" class="whatsapp-button" title="Fale conosco pelo WhatsApp">
@@ -88,8 +72,8 @@
 
     <p class="entrega-info">Entregamos na Região taxa de entrega R$:3,00</p>
     <p class="entrega-info">Vendemos no Atacado e no Varejo</p>
-   
-   
+
+
 
 
 </body>

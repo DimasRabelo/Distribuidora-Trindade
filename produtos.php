@@ -22,14 +22,19 @@
   <title>Produtos - Trindade Distribuidora de Ovos</title>
 </head>
 
+
+ <!-- Topo Menu -->
 <?php require_once('conteudo/topoMenu.php'); ?>
 
 <body>
 
+ <!-- Banner -->
   <?php require_once('conteudo/banner.php'); ?>
 
+ <!-- Produtos -->
   <?php require_once('conteudo/secProdutos.php'); ?>
 
+ <!-- Mapa Icones Roadape-->
   <?php require_once('conteudo/mapaIconesRodape.php'); ?>
 
 
