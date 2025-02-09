@@ -188,11 +188,42 @@ nav ul li a:hover {
     width: 100%; /* 100% da largura da tela */
     
 }
-
 .banner img {
-    width: 100%;
-   
-}  
+    width: 100%;  
+}
+
+.banner .slick-next {
+    right: 40px;
+}
+
+.banner .slick-prev:before,
+.banner .slick-next:before {
+    font-size: 40px;
+    color: #f1c40f;
+}
+
+.banner .slick-prev {
+    left: 40px;
+    z-index: 1;
+}
+
+.banner .slick-dots {
+    bottom: 25px;
+}
+
+.banner .slick-dots li {
+    margin: 0 20px;
+}
+
+.slick-dots li button:before {
+    font-size: 40px;
+    color: #f1c40f;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #48c9b0;
+}
 
 /* Página Produtos */
 
