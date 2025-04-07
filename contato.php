@@ -1,3 +1,65 @@
+
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'path/to/PHPMailer/src/Exception.php';
+require 'path/to/PHPMailer/src/PHPMailer.php';
+require 'path/to/PHPMailer/src/SMTP.php';
+
+$ok = 0;
+
+if (isset($_POST['email'])) {
+
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $fone = $_POST['fone'];
+    $mens = $_POST['mens'];
+    $assunto = "site distribuidora trindade";
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="br">
 
