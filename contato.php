@@ -1,11 +1,14 @@
 
 <?php
+require_once('mailer/Exception.php');
+require_once('mailer/PHPMailer.php');
+require_once('mailer/SMTP.php');
+
 use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require 'path/to/PHPMailer/src/Exception.php';
-require 'path/to/PHPMailer/src/PHPMailer.php';
-require 'path/to/PHPMailer/src/SMTP.php';
+
 
 $ok = 0;
 
@@ -17,32 +20,81 @@ if (isset($_POST['email'])) {
     $mens = $_POST['mens'];
     $assunto = "site distribuidora trindade";
  
+    require_once('admin/class/contato.php');
+
+    $contato = new ContatoClass ();
+
+    $contato->nomecontato = $nome;
+    $contato->emailcontato = $email;
+    $contato->telefonecontato = $fone;
+    $contato->mensagemcontato = $mens;
+
+    $contato->Inserir();
 
 
 
 
+ //Crie uma instância; passar `true (verdadeiro)`
+ $mail = new PHPMailer(true);
 
 
+ try {
+    // Configurações do servidor
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'dimas.rabelosouza@gmail.com'; // Seu Gmail
+    $mail->Password   = 'nyldclklhbdwrpuq';   // Senha de app
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port       = 465;
 
+    // Remetente e destinatário
+    $mail->setFrom('dimas.rabelosouza@gmail.com', $assunto);
+    $mail->addAddress('dimas.rabelosouza@gmail.com'); // Pode ser o mesmo email
 
+    // Conteúdo do email
+    $mail->isHTML(true);
+    $mail->Subject = 'Nova mensagem do site';
+    $mail->Body    = "
+        <strong>Nome:</strong> $nome <br>
+        <strong>Email:</strong> $email <br>
+        <strong>Telefone:</strong> $fone <br>
+        <strong>Mensagem:</strong> $mens
+    ";
+    $mail->AltBody = "Nome: $nome\nEmail: $email\nTelefone: $fone\nMensagem: $mens";
 
-
-
-
-
-
-
-
+    $mail->send();
+    echo 'Mensagem enviada com sucesso!';
+} catch (Exception $e) {
+    echo "Erro ao enviar. Erro: {$mail->ErrorInfo}";
 }
-
-
-
-
-
-
-
-
+}
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
