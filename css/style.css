@@ -43,7 +43,7 @@ h1 {
     /* Tamanho do texto */
     font-weight: bold;
     /* Grossura do texto*/
-    margin-top: -30px;
+    margin-top: 30px;
 }
 
 span {
@@ -62,6 +62,7 @@ span:hover {
 p {
     font-size: 19px;
     font-weight: 520;
+    margin-top: 28px;
 }
 
 .menu p:hover{
@@ -108,16 +109,20 @@ nav ul li a {
     color: #000000; /* Define a cor do texto */
     font-weight: bold; /* Deixa o texto em negrito */
 }
-
-
-
 .menu {
     display: flex;
-    justify-content: flex-start;
-    margin-top: 25px;
-    align-items: center;
-    
+    justify-content: center;
+    gap: 40px; /* Espaçamento entre os itens */
+    margin-top: 40px;
 }
+
+.menu div {
+    text-align: center;
+    flex: 1;
+    max-width: 150px; /* Limita a largura pra padronizar */
+}
+
+
 
 .botao-menu {
     width: 60px;
@@ -291,11 +296,16 @@ footer p {
     font-size: 0.9rem;
 }
 .entrega-info {
-    text-align: right;  /* Alinha o texto à direita */
-    margin-right: 70px; /* Espaçamento da borda direita */
-    font-size: 16px; /* Ajusta o tamanho da fonte */
-    font-weight: bold; /* Deixa o texto em negrito */
-    color: #333; /* Cor do texto */
+    text-align: right;
+    margin-right: 70px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px; /* Para garantir espaço entre os <p> */
+}
+
+.entrega-info:last-child {
+    margin-bottom: 0; /* Remove margem extra do último <p> */
 }
 
    

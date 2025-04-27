@@ -48,20 +48,20 @@
     <div class="menu">
         <div>
             <img src="img/ovo-menu1.png" class="botao-menu"
-                onclick="trocarImagem('img/ovo-branco.png'); trocarCor('#ff8c00');">
-            <p>Ovos Brancos</p>
+                onclick="trocarImagem('img/ovos-branco.png'); trocarCor('#ff8c00');">
+            <p>Brancos</p>
         </div>
 
         <div>
             <img src="img/ovo-menu2.png" class="botao-menu"
                 onclick="trocarImagem('img/ovo-vermelho.png'); trocarCor('#8b5742');">
-            <p>Ovos Vermelhos</p>
+            <p>Vermelhos</p>
         </div>
 
         <div>
             <img src="img/ovo-menu3.png" class="botao-menu"
                 onclick="trocarImagem('img/ovo-codorna.png'); trocarCor('#ada86d');">
-            <p>Ovos de Codorna</p>
+            <p>Codorna</p>
         </div>
     </div>
 
@@ -70,9 +70,7 @@
         <img src="img/zap.png" alt="WhatsApp">
     </a>
 
-    <!-- Informações adicionais -->
-    <p class="entrega-info">Entregamos na região – Taxa de entrega R$: 3,00</p>
-    <p class="entrega-info">Vendemos no atacado e no varejo</p>
+   
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
