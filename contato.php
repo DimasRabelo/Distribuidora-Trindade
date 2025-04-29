@@ -24,10 +24,10 @@ if (isset($_POST['email'])) {
 
     $contato = new ContatoClass ();
 
-    $contato->nomecontato = $nome;
-    $contato->emailcontato = $email;
-    $contato->telefonecontato = $fone;
-    $contato->mensagemcontato = $mens;
+    $contato->nomeContato = $nome;
+    $contato->emailContato = $email;
+    $contato->telefoneContato = $fone;
+    $contato->mensagemContato = $mens;
 
     $contato->Inserir();
 
