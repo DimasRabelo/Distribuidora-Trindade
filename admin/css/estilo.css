@@ -36,7 +36,7 @@ body {
    width: 40%; /* ajuste o tamanho da logo conforme necessário */
    height: auto; /* mantém a proporção da imagem */
    border-radius: 50%;
-   margin-right: 20px; /* espaço entre a logo e o texto */
+   margin-top: 50px;
 }
 
 
@@ -54,12 +54,17 @@ body {
     color: #000000;
     text-align: center;
     padding: 12px;
+    margin-top: 15px;
     border-radius: 8px;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
     transition: background 0.3s;
+    width: 200px;   /* Define uma largura fixa */
+    height: 60px;   /* Define uma altura fixa */
+    line-height: 60px; /* Centraliza verticalmente o texto */
 }
+
 
 .menu-superior a:hover {
     background-color: #d3cfcb;
