@@ -33,7 +33,7 @@ body {
     
 
 .logo {
-   width: 45%; /* ajuste o tamanho da logo conforme necessário */
+   width: 40%; /* ajuste o tamanho da logo conforme necessário */
    height: auto; /* mantém a proporção da imagem */
    border-radius: 50%;
    margin-right: 20px; /* espaço entre a logo e o texto */
