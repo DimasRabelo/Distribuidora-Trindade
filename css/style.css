@@ -125,12 +125,11 @@ nav ul li a {
 
 
 .botao-menu {
-    width: 60px;
+    width: 83px;
     cursor: pointer;
     transition: 1s;
     object-fit: contain;
 }
-
 .botao-menu:hover {
     transform: translateY(-25px);
 }
