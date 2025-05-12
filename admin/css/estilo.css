@@ -1,18 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Caprasimo&family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap");
-
-/* 
-    font-family: 'Caprasimo', cursive;
-    font-family: 'Josefin Sans', sans-serif;
-*/
-
-*,
 a,
 h1,
 h2,
 h3,
 h4 {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 body {
@@ -24,69 +16,53 @@ body {
 }
 
 .topo {
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 80px; /* aqui define o espaçamento nas laterais */
-    }
-    
-
-.logo {
-   width: 40%; /* ajuste o tamanho da logo conforme necessário */
-   height: auto; /* mantém a proporção da imagem */
-   border-radius: 50%;
-   margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 80px; /* aqui define o espaçamento nas laterais */
 }
 
+.logo {
+  width: 10%; /* ajuste o tamanho da logo conforme necessário */
+  height: auto; /* mantém a proporção da imagem */
+  border-radius: 50%;
+  margin: 5px -50px;
+}
 
 .menu-superior {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
-    gap: 15px;
-    padding: 20px;
-    margin: 0 auto; /* centralizar */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .menu-superior a {
-    display: block;
-    background-color: #ff8c00;
-    color: #000000;
-    text-align: center;
-    padding: 12px;
-    margin-top: 15px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: background 0.3s;
-    width: 200px;   /* Define uma largura fixa */
-    height: 60px;   /* Define uma altura fixa */
-    line-height: 60px; /* Centraliza verticalmente o texto */
+  text-decoration: none;
+  background-color: #ff8c00;
+  color:  #4d4b4b;
+  padding: 18px 30px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-
 .menu-superior a:hover {
-    background-color: #d3cfcb;
-    color: #ff8c00;
-}
-.menu-superior a:hover {
-    background-color: #d3cfcb;
-    color: #ff8c00; /* nova cor do texto ao passar o mouse */
+  color: #080807; /* nova cor do texto ao passar o mouse */
 }
 
 .rodapé2 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-    margin-top: 68px; /* Adiciona espaço acima do rodapé */
-    color: #ffffff;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  margin-top: 68px; /* Adiciona espaço acima do rodapé */
+  color: #ffffff;
 }
 .rodapé2 p {
-    margin: 0; /* Remove margem padrão */
-    line-height: 1.5; /* Melhora o espaçamento entre linhas */
-    font-size: 0.7em; /* Tamanho do texto */
-    font-weight: bold; /* Negrito */
+  margin: 0; /* Remove margem padrão */
+  line-height: 1.5; /* Melhora o espaçamento entre linhas */
+  font-size: 0.7em; /* Tamanho do texto */
+  font-weight: bold; /* Negrito */
 }

@@ -294,20 +294,6 @@ footer p {
     margin: 0 10px 0 0;
     font-size: 0.9rem;
 }
-.entrega-info {
-    text-align: right;
-    margin-right: 70px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px; /* Para garantir espaço entre os <p> */
-}
-
-.entrega-info:last-child {
-    margin-bottom: 0; /* Remove margem extra do último <p> */
-}
-
-   
 
 .rodapé2 {
     display: flex;
