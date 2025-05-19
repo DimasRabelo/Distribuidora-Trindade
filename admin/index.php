@@ -12,7 +12,7 @@
 
 <body>
     <header class="topo">
-        <img src="img/logo-trindade.jpg" alt="Imagem da Logo" class="logo">
+        <img src="img/logo-trindade.jpg" alt="LogoTipo" class="logo">
 
         <nav class="menu-superior">
             <a href="index.php?p=dashboard">Dashboard</a>
