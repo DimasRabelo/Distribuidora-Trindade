@@ -1,3 +1,14 @@
+<?php
+$pagina = @$_GET['p'];
+
+
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -67,16 +78,18 @@
     </div>
     </main>
 
+
+    <div class="pagina-atual">
     <?php
     if ($pagina == '') {
         echo '<h2>Dashboard</h2>';
     } else {
-        echo ('<h2>Página: ' . $pagina . '</h2>');
+      echo '<h2>PÁGINA: ' . strtoupper($pagina) . '</h2>';
+
     }
 
     ?>
-
-
+</div>
 </body>
 
 
