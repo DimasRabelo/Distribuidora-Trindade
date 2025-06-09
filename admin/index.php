@@ -1,9 +1,22 @@
 <?php
-$pagina = @$_GET['p'];
+// Pegando o valor da URL
+$pagina = isset($_GET['p']) ? $_GET['p'] : 'dashboard';
 
+// Lista de nomes para exibir com acento e formatação
+$nomesPaginas = [
+    'dashboard'     => 'Dashboard',
+    'funcionarios'  => 'Funcionários',
+    'produtos'      => 'Produtos',
+    'estoque'       => 'Estoque',
+    'vendas'        => 'Vendas',
+    'itensvendidos' => 'Itens Vendidos',
+    'contato'       => 'E-mails',
+    'relatorio'     => 'Relatórios',
+    'ajuda'         => 'Ajuda e Suporte'
+];
 
-
-
+// Se não encontrar no array, mostra o valor cru (sem acento)
+$nomePaginaAtual = $nomesPaginas[$pagina] ?? strtoupper($pagina);
 ?>
 
 
@@ -79,17 +92,12 @@ $pagina = @$_GET['p'];
     </main>
 
 
-    <div class="pagina-atual">
-    <?php
-    if ($pagina == '') {
-        echo '<h2>Dashboard</h2>';
-    } else {
-      echo '<h2>PÁGINA: ' . strtoupper($pagina) . '</h2>';
-
-    }
-
-    ?>
+ <div class="pagina-atual">
+    PÁGINA: <span class="nome-pagina">
+        <?php echo strtoupper($nomePaginaAtual); ?>
+    </span>
 </div>
+
 </body>
 
 
