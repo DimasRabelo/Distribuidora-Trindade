@@ -1,4 +1,7 @@
 
+
+
+
 <?php
 require_once('mailer/Exception.php');
 require_once('mailer/PHPMailer.php');
@@ -8,9 +11,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-
-
 $ok = 0;
+$mensagem = '';
 
 if (isset($_POST['email'])) {
 
@@ -19,97 +21,50 @@ if (isset($_POST['email'])) {
     $fone = $_POST['fone'];
     $mens = $_POST['mens'];
     $assunto = "site distribuidora trindade";
- 
+
     require_once('admin/class/contato.php');
 
-    $contato = new ContatoClass ();
-
+    $contato = new ContatoClass();
     $contato->nomeContato = $nome;
     $contato->emailContato = $email;
     $contato->telefoneContato = $fone;
     $contato->mensagemContato = $mens;
-
     $contato->Inserir();
 
+    $mail = new PHPMailer(true);
 
+    try {
+        // Configurações do servidor
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'dimas.rabelosouza@gmail.com';
+        $mail->Password   = 'nyldclklhbdwrpuq';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = 465;
 
+        // Remetente e destinatário
+        $mail->setFrom('dimas.rabelosouza@gmail.com', $assunto);
+        $mail->addAddress('dimas.rabelosouza@gmail.com');
 
- //Crie uma instância; passar `true (verdadeiro)`
- $mail = new PHPMailer(true);
+        // Conteúdo do email
+        $mail->isHTML(true);
+        $mail->Subject = 'Nova mensagem do site';
+        $mail->Body    = "
+            <strong>Nome:</strong> $nome <br>
+            <strong>Email:</strong> $email <br>
+            <strong>Telefone:</strong> $fone <br>
+            <strong>Mensagem:</strong> $mens
+        ";
+        $mail->AltBody = "Nome: $nome\nEmail: $email\nTelefone: $fone\nMensagem: $mens";
 
-
- try {
-    // Configurações do servidor
-    $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';
-    $mail->SMTPAuth   = true;
-    $mail->Username   = 'dimas.rabelosouza@gmail.com'; // Seu Gmail
-    $mail->Password   = 'nyldclklhbdwrpuq';   // Senha de app
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-    $mail->Port       = 465;
-
-    // Remetente e destinatário
-    $mail->setFrom('dimas.rabelosouza@gmail.com', $assunto);
-    $mail->addAddress('dimas.rabelosouza@gmail.com'); // Pode ser o mesmo email
-
-    // Conteúdo do email
-    $mail->isHTML(true);
-    $mail->Subject = 'Nova mensagem do site';
-    $mail->Body    = "
-        <strong>Nome:</strong> $nome <br>
-        <strong>Email:</strong> $email <br>
-        <strong>Telefone:</strong> $fone <br>
-        <strong>Mensagem:</strong> $mens
-    ";
-    $mail->AltBody = "Nome: $nome\nEmail: $email\nTelefone: $fone\nMensagem: $mens";
-
-    $mail->send();
-    echo 'Mensagem enviada com sucesso!';
-} catch (Exception $e) {
-    echo "Erro ao enviar. Erro: {$mail->ErrorInfo}";
-}
+        $mail->send();
+        $mensagem = '<p class="mensagem-sucesso">Mensagem enviada com sucesso!</p>';
+    } catch (Exception $e) {
+        $mensagem = '<p class="mensagem-erro">Erro ao enviar: ' . $mail->ErrorInfo . '</p>';
+    }
 }
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!DOCTYPE html>
@@ -167,7 +122,9 @@ if (isset($_POST['email'])) {
                 </div>
                 <div class="form-field">
                     <input type="submit" value="Enviar por e-mail">
+                   
                 </div>
+                 <?= $mensagem ?>
             </div>
         </form>
 
