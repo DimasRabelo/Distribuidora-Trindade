@@ -62,6 +62,7 @@ $nomePaginaAtual = $nomesPaginas[$pagina] ?? strtoupper($pagina);
 
                 break;
             case 'funcionarios':
+                 require_once('funcionarios/funcionarios.php');
               
                 break;
 
