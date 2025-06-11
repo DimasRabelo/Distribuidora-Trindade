@@ -1,8 +1,8 @@
 
 
-
-
 <?php
+session_start();
+
 require_once('mailer/Exception.php');
 require_once('mailer/PHPMailer.php');
 require_once('mailer/SMTP.php');
@@ -11,8 +11,11 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-$ok = 0;
 $mensagem = '';
+if (isset($_SESSION['mensagem'])) {
+    $mensagem = $_SESSION['mensagem'];
+    unset($_SESSION['mensagem']);
+}
 
 if (isset($_POST['email'])) {
 
@@ -34,20 +37,17 @@ if (isset($_POST['email'])) {
     $mail = new PHPMailer(true);
 
     try {
-        // Configurações do servidor
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'dimas.rabelosouza@gmail.com';
-        $mail->Password   = 'nyldclklhbdwrpuq';
+        $mail->Password   = 'nyldclklhbdwrpuq'; // Senha de app
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
 
-        // Remetente e destinatário
         $mail->setFrom('dimas.rabelosouza@gmail.com', $assunto);
         $mail->addAddress('dimas.rabelosouza@gmail.com');
 
-        // Conteúdo do email
         $mail->isHTML(true);
         $mail->Subject = 'Nova mensagem do site';
         $mail->Body    = "
@@ -59,10 +59,14 @@ if (isset($_POST['email'])) {
         $mail->AltBody = "Nome: $nome\nEmail: $email\nTelefone: $fone\nMensagem: $mens";
 
         $mail->send();
-        $mensagem = '<p class="mensagem-sucesso">Mensagem enviada com sucesso!</p>';
+
+        $_SESSION['mensagem'] = '<p class="mensagem-sucesso">Mensagem enviada com sucesso!</p>';
     } catch (Exception $e) {
-        $mensagem = '<p class="mensagem-erro">Erro ao enviar: ' . $mail->ErrorInfo . '</p>';
+        $_SESSION['mensagem'] = '<p class="mensagem-erro">Erro ao enviar: ' . $mail->ErrorInfo . '</p>';
     }
+
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit;
 }
 ?>
 

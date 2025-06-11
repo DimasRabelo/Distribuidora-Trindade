@@ -453,12 +453,14 @@ textarea {
     color: rgb(5, 15, 5);
     font-weight: bold;
     margin-top: 10px;
+   
 }
 
 .mensagem-erro {
     color: red;
     font-weight: bold;
     margin-top: 10px;
+   
 }
 
 
